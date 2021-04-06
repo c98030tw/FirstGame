@@ -1,0 +1,46 @@
+Public Class stage_frm
+
+    Public stagenumber As Integer
+
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
+
+        stagenumber = 1
+        fight_frm.Visible = True
+        Me.Visible = False
+    End Sub
+
+    Private Sub stage_frm_Load(sender As Object, e As EventArgs) Handles Me.Load
+        stagenumber = 0
+
+    End Sub
+
+    Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
+        home_frm.Visible = True
+        Me.Visible = False
+
+    End Sub
+
+    Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles PictureBox3.Click
+        stagenumber = 2
+        fight_frm.Visible = True
+        Me.Visible = False
+    End Sub
+
+    Private Sub PictureBox4_Click(sender As Object, e As EventArgs) Handles PictureBox4.Click
+        stagenumber = 3
+        fight_frm.Visible = True
+        Me.Visible = False
+    End Sub
+
+    Private Sub PictureBox5_Click(sender As Object, e As EventArgs) Handles PictureBox5.Click
+        stagenumber = 4
+        fight_frm.Visible = True
+        Me.Visible = False
+    End Sub
+
+    Private Sub PictureBox6_Click(sender As Object, e As EventArgs) Handles PictureBox6.Click
+        stagenumber = 5
+        fight_frm.Visible = True
+        Me.Visible = False
+    End Sub
+End Class
