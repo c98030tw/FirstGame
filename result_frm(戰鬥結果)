@@ -1,0 +1,204 @@
+Public Class result_frm
+
+    Public spdrop, raindrop, spper, rainper As Integer
+
+    Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+
+    End Sub
+
+    Private Sub PictureBox7_Click(sender As Object, e As EventArgs) Handles PictureBox7.Click
+        Me.Visible = False
+        stage_frm.Visible = True
+    End Sub
+
+    Private Sub PictureBox6_Click(sender As Object, e As EventArgs) Handles PictureBox6.Click
+        Me.Visible = False
+        home_frm.Visible = True
+    End Sub
+
+    Private Sub result_frm_GotFocus(sender As Object, e As EventArgs) Handles Me.GotFocus
+        Randomize()
+        resultseting()
+        If fight_frm.winorlose = 0 Then
+            drop()
+        End If
+
+    End Sub
+
+
+    Sub resultseting()
+        If fight_frm.winorlose = 1 Then
+            PictureBox1.Visible = False
+            PictureBox2.Visible = False
+            Label3.Text = 0
+            Label4.Text = 0
+        Else
+            PictureBox1.Visible = True
+            PictureBox2.Visible = True
+        End If
+    End Sub
+
+    Sub drop()
+
+        Select Case stage_frm.stagenumber
+            Case 1
+
+                spper = (100 * Rnd()) + 1
+                rainper = (100 * Rnd()) + 1
+                If spper <= 3 Then
+                    spdrop = 3
+                    Label3.Text = 3
+                    start1_frm.mysp = start1_frm.mysp + spdrop
+                ElseIf spper > 3 And spper <= 30 Then
+                    spdrop = 2
+                    Label3.Text = 2
+                    start1_frm.mysp = start1_frm.mysp + spdrop
+                Else
+                    spdrop = 1
+                    Label3.Text = 1
+                    start1_frm.mysp = start1_frm.mysp + spdrop
+                End If
+
+                If rainper <= 3 Then
+                    raindrop = 2
+                    Label4.Text = 2
+                    start1_frm.myrain = start1_frm.myrain + raindrop
+                ElseIf rainper > 3 And rainper <= 30 Then
+                    raindrop = 1
+                    Label4.Text = 1
+                    start1_frm.myrain = start1_frm.myrain + raindrop
+                Else
+                    raindrop = 0
+                    Label4.Text = 0
+                    start1_frm.myrain = start1_frm.myrain
+                End If
+
+            Case 2
+                spper = (100 * Rnd()) + 1
+                rainper = (100 * Rnd()) + 1
+                If spper <= 4 Then
+                    spdrop = 3
+                    Label3.Text = 3
+                    start1_frm.mysp = start1_frm.mysp + spdrop
+                ElseIf spper > 4 And spper <= 32 Then
+                    spdrop = 2
+                    Label3.Text = 2
+                    start1_frm.mysp = start1_frm.mysp + spdrop
+                Else
+                    spdrop = 1
+                    Label3.Text = 1
+                    start1_frm.mysp = start1_frm.mysp + spdrop
+                End If
+
+                If rainper <= 4 Then
+                    raindrop = 2
+                    Label4.Text = 2
+                    start1_frm.myrain = start1_frm.myrain + raindrop
+                ElseIf rainper > 4 And rainper <= 32 Then
+                    raindrop = 1
+                    Label4.Text = 1
+                    start1_frm.myrain = start1_frm.myrain + raindrop
+                Else
+                    raindrop = 0
+                    Label4.Text = 0
+                    start1_frm.myrain = start1_frm.myrain
+                End If
+
+            Case 3
+                spper = (100 * Rnd()) + 1
+                rainper = (100 * Rnd()) + 1
+                If spper <= 5 Then
+                    spdrop = 3
+                    Label3.Text = 3
+                    start1_frm.mysp = start1_frm.mysp + spdrop
+                ElseIf spper > 5 And spper <= 34 Then
+                    spdrop = 2
+                    Label3.Text = 2
+                    start1_frm.mysp = start1_frm.mysp + spdrop
+                Else
+                    spdrop = 1
+                    Label3.Text = 1
+                    start1_frm.mysp = start1_frm.mysp + spdrop
+                End If
+
+                If rainper <= 5 Then
+                    raindrop = 2
+                    Label4.Text = 2
+                    start1_frm.myrain = start1_frm.myrain + raindrop
+                ElseIf rainper > 5 And rainper <= 34 Then
+                    raindrop = 1
+                    Label4.Text = 1
+                    start1_frm.myrain = start1_frm.myrain + raindrop
+                Else
+                    raindrop = 0
+                    Label4.Text = 0
+                    start1_frm.myrain = start1_frm.myrain
+                End If
+
+            Case 4
+                spper = (100 * Rnd()) + 1
+                rainper = (100 * Rnd()) + 1
+                If spper <= 6 Then
+                    spdrop = 3
+                    Label3.Text = 3
+                    start1_frm.mysp = start1_frm.mysp + spdrop
+                ElseIf spper > 6 And spper <= 36 Then
+                    spdrop = 2
+                    Label3.Text = 2
+                    start1_frm.mysp = start1_frm.mysp + spdrop
+                Else
+                    spdrop = 1
+                    Label3.Text = 1
+                    start1_frm.mysp = start1_frm.mysp + spdrop
+                End If
+
+                If rainper <= 6 Then
+                    raindrop = 2
+                    Label4.Text = 2
+                    start1_frm.myrain = start1_frm.myrain + raindrop
+                ElseIf rainper > 6 And rainper <= 36 Then
+                    raindrop = 1
+                    Label4.Text = 1
+                    start1_frm.myrain = start1_frm.myrain + raindrop
+                Else
+                    raindrop = 0
+                    Label4.Text = 0
+                    start1_frm.myrain = start1_frm.myrain
+                End If
+
+            Case 5
+                spper = (100 * Rnd()) + 1
+                rainper = (100 * Rnd()) + 1
+                If spper <= 7 Then
+                    spdrop = 3
+                    Label3.Text = 3
+                    start1_frm.mysp = start1_frm.mysp + spdrop
+                ElseIf spper > 7 And spper <= 38 Then
+                    spdrop = 2
+                    Label3.Text = 2
+                    start1_frm.mysp = start1_frm.mysp + spdrop
+                Else
+                    spdrop = 1
+                    Label3.Text = 1
+                    start1_frm.mysp = start1_frm.mysp + spdrop
+                End If
+
+                If rainper <= 7 Then
+                    raindrop = 2
+                    Label4.Text = 2
+                    start1_frm.myrain = start1_frm.myrain + raindrop
+                ElseIf rainper > 7 And rainper <= 38 Then
+                    raindrop = 1
+                    Label4.Text = 1
+                    start1_frm.myrain = start1_frm.myrain + raindrop
+                Else
+                    raindrop = 0
+                    Label4.Text = 0
+                    start1_frm.myrain = start1_frm.myrain
+                End If
+
+        End Select
+    End Sub
+
+End Class
