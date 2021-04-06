@@ -1,0 +1,280 @@
+Public Class fight_frm
+
+    Public myHP, round, myATK, enmPSS As Integer
+
+    Public enmATK, enmHP, CD, CD1 As Integer
+
+    Public enmdata(10) As Integer
+    Public winorlose As Integer
+
+    Sub gameseting()
+        Select Case stage_frm.stagenumber
+            Case 1
+                PictureBox5.Visible = False
+                myr.Visible = False
+                myg.Visible = False
+                myb.Visible = False
+                enmr.Visible = False
+                enmg.Visible = False
+                enmb.Visible = False
+                enmHP = 5000
+                enmATK = 549
+                myATK = cha_amanashi.ATKama
+                myHP = cha_amanashi.HPama
+                Label2.Text = myHP
+                Label4.Text = 5000
+
+                Label4.Visible = True
+                Label1.Visible = True
+                PictureBox6.Visible = True
+            Case 2
+                PictureBox5.Visible = False
+                myr.Visible = False
+                myg.Visible = False
+                myb.Visible = False
+                enmr.Visible = False
+                enmg.Visible = False
+                enmb.Visible = False
+                enmHP = 7500
+                enmATK = 728
+                myATK = cha_amanashi.ATKama
+                myHP = cha_amanashi.HPama
+                Label2.Text = myHP
+                Label4.Text = 7500
+
+                Label4.Visible = True
+                Label1.Visible = True
+                PictureBox6.Visible = True
+
+            Case 3
+                PictureBox5.Visible = False
+                myr.Visible = False
+                myg.Visible = False
+                myb.Visible = False
+                enmr.Visible = False
+                enmg.Visible = False
+                enmb.Visible = False
+                enmHP = 10000
+                enmATK = 987
+                myATK = cha_amanashi.ATKama
+                myHP = cha_amanashi.HPama
+                Label2.Text = myHP
+                Label4.Text = 10000
+
+                Label4.Visible = True
+                Label1.Visible = True
+                PictureBox6.Visible = True
+            Case 4
+                PictureBox5.Visible = False
+                myr.Visible = False
+                myg.Visible = False
+                myb.Visible = False
+                enmr.Visible = False
+                enmg.Visible = False
+                enmb.Visible = False
+                enmHP = 12500
+                enmATK = 1314
+                myATK = cha_amanashi.ATKama
+                myHP = cha_amanashi.HPama
+                Label2.Text = myHP
+                Label4.Text = 12500
+
+                Label4.Visible = True
+                Label1.Visible = True
+                PictureBox6.Visible = True
+            Case 5
+                PictureBox5.Visible = False
+                myr.Visible = False
+                myg.Visible = False
+                myb.Visible = False
+                enmr.Visible = False
+                enmg.Visible = False
+                enmb.Visible = False
+                enmHP = 15000
+                enmATK = 1623
+                myATK = cha_amanashi.ATKama
+                myHP = cha_amanashi.HPama
+                Label2.Text = myHP
+                Label4.Text = 15000
+
+                Label4.Visible = True
+                Label1.Visible = True
+                PictureBox6.Visible = True
+
+            Case Else
+
+        End Select
+
+    End Sub
+
+    Private Sub fight_frm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Randomize()
+
+        Call gameseting()
+
+    End Sub
+
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
+        PictureBox5.Visible = True
+        myr.Visible = True
+        Timer1.Enabled = True
+        enmPSS = Int((3 * Rnd()) + 1)
+
+        If enmPSS = 1 Then
+            enmr.Visible = True
+
+            res.Visible = True
+            res.Text = "和"
+            res.ForeColor = Color.FromArgb(255, 255, 255, 0)   'white
+        ElseIf enmPSS = 2 Then
+            enmg.Visible = True
+            enmHP = enmHP - myATK
+            res.Visible = True
+            res.Text = "贏"
+            res.ForeColor = Color.FromArgb(240, 223, 13, 0)   'yellow
+        ElseIf enmPSS = 3 Then
+            enmb.Visible = True
+            myHP = myHP - enmATK
+            res.Visible = True
+            res.Text = "負"
+            res.ForeColor = Color.FromArgb(192, 0, 0, 0)   'red
+        End If
+        Label4.Text = enmHP
+        Label2.Text = myHP
+
+        If enmHP <= 0 Then
+            Label4.Text = 0
+            Timer2.Enabled = True
+            Timer3.Enabled = True
+        End If
+
+        If myHP <= 0 Then
+            Label2.Text = 0
+            Timer4.Enabled = True
+
+        End If
+    End Sub
+
+
+    Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
+        PictureBox5.Visible = True
+        myg.Visible = True
+        Timer1.Enabled = True
+        enmPSS = Int(((3 * Rnd()) + 1))
+        If enmPSS = 1 Then
+            enmr.Visible = True
+            myHP = myHP - enmATK
+            res.Visible = True
+            res.Text = "負"
+            res.ForeColor = Color.FromArgb(192, 0, 0, 0)   'red
+        ElseIf enmPSS = 2 Then
+            enmg.Visible = True
+
+            res.Visible = True
+            res.Text = "和"
+            res.ForeColor = Color.FromArgb(255, 255, 255, 0)   'white
+        ElseIf enmPSS = 3 Then
+            enmb.Visible = True
+            enmHP = enmHP - myATK
+            res.Visible = True
+            res.Text = "贏"
+            res.ForeColor = Color.FromArgb(240, 223, 13, 0)   'yellow
+        End If
+        Label4.Text = enmHP
+        Label2.Text = myHP
+        If enmHP <= 0 Then
+            Label4.Text = 0
+            Timer2.Enabled = True
+            Timer3.Enabled = True
+        End If
+        If myHP <= 0 Then
+            Label2.Text = 0
+            Timer4.Enabled = True
+
+        End If
+
+    End Sub
+
+    Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles PictureBox3.Click
+        PictureBox5.Visible = True
+        myb.Visible = True
+        Timer1.Enabled = True
+        enmPSS = Int((3 * Rnd()) + 1)
+        If enmPSS = 1 Then
+            enmr.Visible = True
+            enmHP = enmHP - myATK
+            res.Visible = True
+            res.Text = "贏"
+            res.ForeColor = Color.FromArgb(240, 223, 13, 0)   'yellow
+        ElseIf enmPSS = 2 Then
+            enmg.Visible = True
+            myHP = myHP - enmATK
+            res.Visible = True
+            res.Text = "負"
+            res.ForeColor = Color.FromArgb(192, 0, 0, 0)   'red
+        ElseIf enmPSS = 3 Then
+            enmb.Visible = True
+
+            res.Visible = True
+            res.Text = "和"
+            res.ForeColor = Color.FromArgb(255, 255, 255, 0)   'white
+        End If
+        Label4.Text = enmHP
+        Label2.Text = myHP
+
+        If enmHP <= 0 Then
+            Label4.Text = 0
+            Timer2.Enabled = True
+            Timer3.Enabled = True
+        End If
+
+        If myHP <= 0 Then
+            Label2.Text = 0
+            Timer4.Enabled = True
+
+        End If
+
+    End Sub
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+        PictureBox5.Visible = False
+        myr.Visible = False
+        myg.Visible = False
+        myb.Visible = False
+        enmr.Visible = False
+        enmg.Visible = False
+        enmb.Visible = False
+        res.Visible = False
+        Timer1.Enabled = False
+
+
+    End Sub
+
+
+    Private Sub Timer2_Tick(sender As Object, e As EventArgs) Handles Timer2.Tick
+        Label4.Visible = False
+
+        PictureBox6.Visible = False
+        Label1.Visible = False
+        Timer2.Enabled = False
+    End Sub
+
+    Private Sub Timer3_Tick(sender As Object, e As EventArgs) Handles Timer3.Tick
+        winorlose = 0 'win
+        result_frm.Visible = True
+        Me.Visible = False
+        Timer3.Enabled = False
+    End Sub
+
+    Private Sub Timer4_Tick(sender As Object, e As EventArgs) Handles Timer4.Tick
+        winorlose = 1 'lose
+        result_frm.Visible = True
+        Me.Visible = False
+        Timer4.Enabled = False
+    End Sub
+
+    Private Sub fight_frm_GotFocus(sender As Object, e As EventArgs) Handles Me.GotFocus
+        Randomize()
+        Call gameseting()
+
+    End Sub
+End Class
