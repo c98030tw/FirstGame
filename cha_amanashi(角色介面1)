@@ -1,0 +1,463 @@
+Public Class cha_amanashi
+    Public hplv, atklv As Integer
+    Public HPama, ATKama As Integer
+
+    Private Sub PictureBox5_Click(sender As Object, e As EventArgs) Handles PictureBox5.Click
+        Me.Visible = False
+        allcha_frm.Visible = True
+    End Sub
+
+    Private Sub a01_Click(sender As Object, e As EventArgs) Handles a01.Click
+        If start1_frm.mysp >= 1 Then
+            start1_frm.mysp = start1_frm.mysp - 1
+            ATKama = ATKama * 1.05
+            a01.Visible = False
+            ab01.Visible = False
+            a02.Visible = True
+
+            Label16.Visible = True
+            Timer1.Enabled = True
+        Else
+
+            Label15.Visible = True
+            Timer1.Enabled = True
+        End If
+
+        Label2.Text = ATKama
+        Label4.Text = HPama
+        L7.Text = start1_frm.mysp
+
+    End Sub
+
+    Private Sub a02_Click(sender As Object, e As EventArgs) Handles a02.Click
+        If start1_frm.mysp >= 3 Then
+            start1_frm.mysp = start1_frm.mysp - 3
+            ATKama = ATKama * 1.05
+            a02.Visible = False
+            ab02.Visible = False
+            a03.Visible = True
+
+            Label16.Visible = True
+            Timer1.Enabled = True
+        Else
+
+            Label15.Visible = True
+            Timer1.Enabled = True
+        End If
+
+        Label2.Text = ATKama
+        Label4.Text = HPama
+        L7.Text = start1_frm.mysp
+    End Sub
+
+    Private Sub a03_Click(sender As Object, e As EventArgs) Handles a03.Click
+        If start1_frm.mysp >= 6 Then
+            start1_frm.mysp = start1_frm.mysp - 6
+            ATKama = ATKama * 1.05
+            a03.Visible = False
+            ab03.Visible = False
+            a04.Visible = True
+
+            Label16.Visible = True
+            Timer1.Enabled = True
+        Else
+
+            Label15.Visible = True
+            Timer1.Enabled = True
+        End If
+
+        Label2.Text = ATKama
+        Label4.Text = HPama
+        L7.Text = start1_frm.mysp
+    End Sub
+
+    Private Sub a04_Click(sender As Object, e As EventArgs) Handles a04.Click
+        If start1_frm.mysp >= 10 Then
+            start1_frm.mysp = start1_frm.mysp - 10
+            ATKama = ATKama * 1.05
+            a04.Visible = False
+            ab04.Visible = False
+            a05.Visible = True
+
+            Label16.Visible = True
+            Timer1.Enabled = True
+        Else
+
+            Label15.Visible = True
+            Timer1.Enabled = True
+        End If
+
+        Label2.Text = ATKama
+        Label4.Text = HPama
+        L7.Text = start1_frm.mysp
+
+    End Sub
+
+    Private Sub a05_Click(sender As Object, e As EventArgs) Handles a05.Click
+        If start1_frm.mysp >= 15 Then
+            start1_frm.mysp = start1_frm.mysp - 15
+            ATKama = ATKama * 1.1
+            a05.Visible = False
+            ab05.Visible = False
+            a06.Visible = True
+
+            Label16.Visible = True
+            Timer1.Enabled = True
+        Else
+
+            Label15.Visible = True
+            Timer1.Enabled = True
+        End If
+
+        Label2.Text = ATKama
+        Label4.Text = HPama
+        L7.Text = start1_frm.mysp
+
+    End Sub
+
+    Private Sub a06_Click(sender As Object, e As EventArgs) Handles a06.Click
+        If start1_frm.mysp >= 21 Then
+            start1_frm.mysp = start1_frm.mysp - 21
+            ATKama = ATKama * 1.05
+            a06.Visible = False
+            ab06.Visible = False
+            a07.Visible = True
+
+            Label16.Visible = True
+            Timer1.Enabled = True
+        Else
+
+            Label15.Visible = True
+            Timer1.Enabled = True
+        End If
+
+        Label2.Text = ATKama
+        Label4.Text = HPama
+        L7.Text = start1_frm.mysp
+
+    End Sub
+
+    Private Sub a07_Click(sender As Object, e As EventArgs) Handles a07.Click
+        If start1_frm.mysp >= 28 Then
+            start1_frm.mysp = start1_frm.mysp - 28
+            ATKama = ATKama * 1.05
+            a07.Visible = False
+            ab07.Visible = False
+            a08.Visible = True
+
+            Label16.Visible = True
+            Timer1.Enabled = True
+        Else
+
+            Label15.Visible = True
+            Timer1.Enabled = True
+        End If
+
+        Label2.Text = ATKama
+        Label4.Text = HPama
+        L7.Text = start1_frm.mysp
+
+    End Sub
+
+    Private Sub a08_Click(sender As Object, e As EventArgs) Handles a08.Click
+        If start1_frm.mysp >= 36 Then
+            start1_frm.mysp = start1_frm.mysp - 36
+            ATKama = ATKama * 1.05
+            a08.Visible = False
+            ab08.Visible = False
+            a09.Visible = True
+
+            Label16.Visible = True
+            Timer1.Enabled = True
+        Else
+
+            Label15.Visible = True
+            Timer1.Enabled = True
+        End If
+
+        Label2.Text = ATKama
+        Label4.Text = HPama
+        L7.Text = start1_frm.mysp
+    End Sub
+
+    Private Sub a09_Click(sender As Object, e As EventArgs) Handles a09.Click
+        If start1_frm.mysp >= 45 Then
+            start1_frm.mysp = start1_frm.mysp - 45
+            ATKama = ATKama * 1.05
+            a09.Visible = False
+            ab09.Visible = False
+            a10.Visible = True
+
+            Label16.Visible = True
+            Timer1.Enabled = True
+        Else
+
+            Label15.Visible = True
+            Timer1.Enabled = True
+        End If
+
+        Label2.Text = ATKama
+        Label4.Text = HPama
+        L7.Text = start1_frm.mysp
+    End Sub
+
+    Private Sub a10_Click(sender As Object, e As EventArgs) Handles a10.Click
+        If start1_frm.mysp >= 55 Then
+            start1_frm.mysp = start1_frm.mysp - 55
+            ATKama = ATKama * 1.2
+            a10.Visible = False
+            ab10.Visible = False
+
+            Label16.Visible = True
+            Timer1.Enabled = True
+        Else
+
+            Label15.Visible = True
+            Timer1.Enabled = True
+        End If
+
+        Label2.Text = ATKama
+        Label4.Text = HPama
+        L7.Text = start1_frm.mysp
+    End Sub
+    
+    Private Sub h01_Click(sender As Object, e As EventArgs) Handles h01.Click
+        If start1_frm.mysp >= 1 Then
+            start1_frm.mysp = start1_frm.mysp - 1
+            HPama = HPama * 1.05
+            h01.Visible = False
+            hb01.Visible = False
+            h02.Visible = True
+
+            Label16.Visible = True
+            Timer1.Enabled = True
+        Else
+
+            Label15.Visible = True
+            Timer1.Enabled = True
+        End If
+
+        Label2.Text = ATKama
+        Label4.Text = HPama
+        L7.Text = start1_frm.mysp
+
+    End Sub
+
+    Private Sub h02_Click(sender As Object, e As EventArgs) Handles h02.Click
+        If start1_frm.mysp >= 3 Then
+            start1_frm.mysp = start1_frm.mysp - 3
+            HPama = HPama * 1.05
+            h02.Visible = False
+            hb02.Visible = False
+            h03.Visible = True
+
+            Label16.Visible = True
+            Timer1.Enabled = True
+        Else
+
+            Label15.Visible = True
+            Timer1.Enabled = True
+        End If
+
+        Label2.Text = ATKama
+        Label4.Text = HPama
+        L7.Text = start1_frm.mysp
+    End Sub
+
+    Private Sub h03_Click(sender As Object, e As EventArgs) Handles h03.Click
+        If start1_frm.mysp >= 6 Then
+            start1_frm.mysp = start1_frm.mysp - 6
+            HPama = HPama * 1.05
+            h03.Visible = False
+            hb03.Visible = False
+            h04.Visible = True
+
+            Label16.Visible = True
+            Timer1.Enabled = True
+        Else
+
+            Label15.Visible = True
+            Timer1.Enabled = True
+        End If
+
+        Label2.Text = ATKama
+        Label4.Text = HPama
+        L7.Text = start1_frm.mysp
+
+    End Sub
+
+    Private Sub h04_Click(sender As Object, e As EventArgs) Handles h04.Click
+        If start1_frm.mysp >= 10 Then
+            start1_frm.mysp = start1_frm.mysp - 10
+            HPama = HPama * 1.05
+            h04.Visible = False
+            hb04.Visible = False
+            h05.Visible = True
+
+            Label16.Visible = True
+            Timer1.Enabled = True
+        Else
+
+            Label15.Visible = True
+            Timer1.Enabled = True
+        End If
+
+        Label2.Text = ATKama
+        Label4.Text = HPama
+        L7.Text = start1_frm.mysp
+
+    End Sub
+
+   Private Sub h05_Click(sender As Object, e As EventArgs) Handles h05.Click
+        If start1_frm.mysp >= 15 Then
+            start1_frm.mysp = start1_frm.mysp - 15
+            HPama = HPama * 1.05
+            h05.Visible = False
+            hb05.Visible = False
+            h06.Visible = True
+
+            Label16.Visible = True
+            Timer1.Enabled = True
+        Else
+
+            Label15.Visible = True
+            Timer1.Enabled = True
+        End If
+
+        Label2.Text = ATKama
+        Label4.Text = HPama
+        L7.Text = start1_frm.mysp
+
+    End Sub
+
+    Private Sub h06_Click(sender As Object, e As EventArgs) Handles h06.Click
+        If start1_frm.mysp >= 21 Then
+            start1_frm.mysp = start1_frm.mysp - 21
+            HPama = HPama * 1.05
+            h06.Visible = False
+            hb06.Visible = False
+            h07.Visible = True
+
+            Label16.Visible = True
+            Timer1.Enabled = True
+        Else
+
+            Label15.Visible = True
+            Timer1.Enabled = True
+        End If
+
+        Label2.Text = ATKama
+        Label4.Text = HPama
+        L7.Text = start1_frm.mysp
+
+    End Sub
+
+    Private Sub h07_Click(sender As Object, e As EventArgs) Handles h07.Click
+        If start1_frm.mysp >= 28 Then
+            start1_frm.mysp = start1_frm.mysp - 28
+            HPama = HPama * 1.05
+            h07.Visible = False
+            hb07.Visible = False
+            h08.Visible = True
+
+            Label16.Visible = True
+            Timer1.Enabled = True
+        Else
+
+            Label15.Visible = True
+            Timer1.Enabled = True
+        End If
+
+        Label2.Text = ATKama
+        Label4.Text = HPama
+        L7.Text = start1_frm.mysp
+
+    End Sub
+
+    Private Sub h08_Click(sender As Object, e As EventArgs) Handles h08.Click
+        If start1_frm.mysp >= 36 Then
+            start1_frm.mysp = start1_frm.mysp - 36
+            HPama = HPama * 1.05
+            h08.Visible = False
+            hb08.Visible = False
+            h09.Visible = True
+
+            Label16.Visible = True
+            Timer1.Enabled = True
+        Else
+
+            Label15.Visible = True
+            Timer1.Enabled = True
+        End If
+
+        Label2.Text = ATKama
+        Label4.Text = HPama
+        L7.Text = start1_frm.mysp
+
+    End Sub
+
+    Private Sub h09_Click(sender As Object, e As EventArgs) Handles h09.Click
+        If start1_frm.mysp >= 45 Then
+            start1_frm.mysp = start1_frm.mysp - 45
+            HPama = HPama * 1.05
+            h09.Visible = False
+            hb09.Visible = False
+            h10.Visible = True
+
+            Label16.Visible = True
+            Timer1.Enabled = True
+        Else
+
+            Label15.Visible = True
+            Timer1.Enabled = True
+        End If
+
+        Label2.Text = ATKama
+        Label4.Text = HPama
+        L7.Text = start1_frm.mysp
+
+    End Sub
+
+    Private Sub h10_Click(sender As Object, e As EventArgs) Handles h10.Click
+        If start1_frm.mysp >= 55 Then
+            start1_frm.mysp = start1_frm.mysp - 55
+            HPama = HPama * 1.05
+            h10.Visible = False
+            hb10.Visible = False
+
+            Label16.Visible = True
+            Timer1.Enabled = True
+        Else
+
+            Label15.Visible = True
+            Timer1.Enabled = True
+        End If
+
+        Label2.Text = ATKama
+        Label4.Text = HPama
+        L7.Text = start1_frm.mysp
+
+    End Sub
+
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+        Label15.Visible = False
+        Label16.Visible = False
+        Timer1.Enabled = False
+    End Sub
+
+    Private Sub cha_amanashi_Load(sender As Object, e As EventArgs) Handles Me.Load
+
+        Label2.Text = ATKama
+        Label4.Text = HPama
+        L7.Text = start1_frm.mysp
+        L8.Text = start1_frm.myrain
+
+    End Sub
+
+    Private Sub cha_amanashi_GotFocus(sender As Object, e As EventArgs) Handles Me.GotFocus
+        Label2.Text = ATKama
+        Label4.Text = HPama
+        L7.Text = start1_frm.mysp
+        L8.Text = start1_frm.myrain
+    End Sub
+End Class
