@@ -1,0 +1,26 @@
+Public Class allcha_frm
+
+
+    Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
+        home_frm.Visible = True
+        Me.Visible = False
+    End Sub
+
+    Private Sub PictureBox7_Click(sender As Object, e As EventArgs) Handles PictureBox7.Click
+        cha_amanashi.Visible = True
+        Me.Visible = False
+    End Sub
+
+    Private Sub allcha_frm_Load(sender As Object, e As EventArgs) Handles Me.Load
+        Label3.Text = start1_frm.mysp
+        Label4.Text = start1_frm.myrain
+    End Sub
+
+    Private Sub allcha_frm_GotFocus(sender As Object, e As EventArgs) Handles Me.GotFocus
+        Label3.Text = start1_frm.mysp
+        Label4.Text = start1_frm.myrain
+
+    End Sub
+
+
+End Class
